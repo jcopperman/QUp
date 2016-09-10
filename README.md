@@ -7,8 +7,8 @@ It is not inteded for this app replace or compete with project management softwa
 
 The following features are currently available in QUp:
 
-Projects 
-Sprints
-Features
-User Stories
-Issues
+1. Projects - Parent model listing all projects
+2. Sprints - Sprints per project
+3. Features - Features per sprint
+4. User Stories - User stories for sprint
+5. Issues - Issues logged on user stories or features
