@@ -90,6 +90,10 @@
     <Compile Include="Migrations\201609101001485_Added status to issues.Designer.cs">
       <DependentUpon>201609101001485_Added status to issues.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609101022408_Added IsHotfix.cs" />
+    <Compile Include="Migrations\201609101022408_Added IsHotfix.Designer.cs">
+      <DependentUpon>201609101022408_Added IsHotfix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="QUpContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -116,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609101001485_Added status to issues.resx">
       <DependentUpon>201609101001485_Added status to issues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609101022408_Added IsHotfix.resx">
+      <DependentUpon>201609101022408_Added IsHotfix.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,6 +8,10 @@ namespace QUp.Domain
         public string Title { get; set; }
         public string Description { get; set; }
         public Status Status { get; set; }
+
+        //Is Hotfix?git 
+        public bool IsHotfix { get; set; }
+
         //TODO: Attachment
 
         [Required]
