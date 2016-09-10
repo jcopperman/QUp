@@ -1,5 +1,5 @@
 # QUp
-Test facilitator for QA in Scrum environments
+-Test facilitator
 
 User story and issue tracking for QA in the role of a Scrum environment.
 
