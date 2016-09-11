@@ -15,23 +15,31 @@ namespace QUp.Api.Controllers
 {
     public class FeaturesController : ApiController
     {
-        private QUpContext db = new QUpContext();
+
 
         // GET: api/Features
         public IQueryable<Feature> GetFeatures()
         {
-            return db.Features;
+            using (var db = new QUpContext())
+            {
+                return db.Features;
+            }
         }
 
         // GET: api/Features/5
         [ResponseType(typeof(Feature))]
         public IHttpActionResult GetFeature(int id)
         {
-            Feature feature = db.Features.Find(id);
+            Feature feature;
+            using (var db = new QUpContext())
+            {
+                feature = db.Features.Find(id);
+            }
             if (feature == null)
             {
                 return NotFound();
             }
+
 
             return Ok(feature);
         }
@@ -49,22 +57,25 @@ namespace QUp.Api.Controllers
             {
                 return BadRequest();
             }
-
-            db.Entry(feature).State = EntityState.Modified;
-
-            try
+            using (var db = new QUpContext())
             {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!FeatureExists(id))
+                db.Entry(feature).State = EntityState.Modified;
+
+
+                try
                 {
-                    return NotFound();
+                    db.SaveChanges();
                 }
-                else
+                catch (DbUpdateConcurrencyException)
                 {
-                    throw;
+                    if (!FeatureExists(id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
                 }
             }
 
@@ -80,8 +91,11 @@ namespace QUp.Api.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.Features.Add(feature);
-            db.SaveChanges();
+            using (var db = new QUpContext())
+            {
+                db.Features.Add(feature);
+                db.SaveChanges();
+            }
 
             return CreatedAtRoute("DefaultApi", new { id = feature.Id }, feature);
         }
@@ -90,30 +104,41 @@ namespace QUp.Api.Controllers
         [ResponseType(typeof(Feature))]
         public IHttpActionResult DeleteFeature(int id)
         {
-            Feature feature = db.Features.Find(id);
-            if (feature == null)
+            Feature feature;
+            using (var db = new QUpContext())
             {
-                return NotFound();
-            }
+                feature = db.Features.Find(id);
 
-            db.Features.Remove(feature);
-            db.SaveChanges();
+                if (feature == null)
+                {
+                    return NotFound();
+                }
+
+                db.Features.Remove(feature);
+                db.SaveChanges();
+            }
 
             return Ok(feature);
         }
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing)
+            using (var db = new QUpContext())
             {
-                db.Dispose();
+                if (disposing)
+                {
+                    db.Dispose();
+                }
             }
             base.Dispose(disposing);
         }
 
         private bool FeatureExists(int id)
         {
-            return db.Features.Count(e => e.Id == id) > 0;
+            using (var db = new QUpContext())
+            {
+                return db.Features.Count(e => e.Id == id) > 0;
+            }
         }
     }
 }

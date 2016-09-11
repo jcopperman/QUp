@@ -4,6 +4,7 @@ using QUp.Api.Controllers;
 using QUp.Domain;
 using System.Web.Http.Results;
 using System.Net;
+using QUp.DataModel.DAL;
 
 namespace QUp.Api.Tests.Tests
 {
@@ -11,29 +12,26 @@ namespace QUp.Api.Tests.Tests
     public class TestProjectController
     {
         [TestMethod]
-        public void PostProject_ShouldReturnSameProject()
+        public void InsertProject_ShouldReturnTrue()
         {
-            var controller = new ProjectsController(new TestQUpContext());
+            IProjectRepository repo = new ProjectRepository(new TestQUpContext());
 
             var item = GetDemoProject();
 
-            var result =
-                controller.PostProject(item) as CreatedAtRouteNegotiatedContentResult<Project>;
+            var result = repo.UpdateProject(item);
 
-            Assert.IsNotNull(result);
-            Assert.AreEqual(result.RouteName, "DefaultApi");
-            Assert.AreEqual(result.RouteValues["id"], result.Content.Id);
-            Assert.AreEqual(result.Content.Title, item.Title);
+            Assert.IsTrue(result, "Insert did not succeed");
         }
 
         [TestMethod]
         public void PutProject_ShouldReturnStatusCode()
         {
-            var controller = new ProjectsController(new TestQUpContext());
+            //var controller = new ProjectsController(new TestQUpContext());
+            IProjectRepository repo = new ProjectRepository(new TestQUpContext());
 
             var item = GetDemoProject();
 
-            var result = controller.PutProject(item.Id, item) as StatusCodeResult;
+            var result = repo(item.Id, item) as StatusCodeResult;
             Assert.IsNotNull(result);
             Assert.IsInstanceOfType(result, typeof(StatusCodeResult));
             Assert.AreEqual(HttpStatusCode.NoContent, result.StatusCode);
@@ -92,7 +90,7 @@ namespace QUp.Api.Tests.Tests
 
         Project GetDemoProject()
         {
-            return new Project() { Id = 3, Title = "Demo name"};
+            return new Project() { Id = 3, Title = "Demo name" };
         }
     }
 }

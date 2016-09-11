@@ -10,24 +10,26 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using QUp.DataModel;
 using QUp.Domain;
+using QUp.DataModel.DAL;
 
 namespace QUp.Api.Controllers
 {
     public class ProjectsController : ApiController
     {
-        private QUpContext db = new QUpContext();
+        ProjectRepository projectRepo = new ProjectRepository(new QUpContext());
 
         // GET: api/Projects
-        public IQueryable<Project> GetProjects()
+        public IEnumerable<Project> GetProjects()
         {
-            return db.Projects;
+            return projectRepo.GetProjects();
         }
 
         // GET: api/Projects/5
         [ResponseType(typeof(Project))]
         public IHttpActionResult GetProject(int id)
         {
-            Project project = db.Projects.Find(id);
+            Project project = projectRepo.GetProjectByID(id);
+
             if (project == null)
             {
                 return NotFound();
@@ -50,23 +52,7 @@ namespace QUp.Api.Controllers
                 return BadRequest();
             }
 
-            db.Entry(project).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProjectExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            projectRepo.UpdateProject(project);
 
             return StatusCode(HttpStatusCode.NoContent);
         }
@@ -79,9 +65,7 @@ namespace QUp.Api.Controllers
             {
                 return BadRequest(ModelState);
             }
-
-            db.Projects.Add(project);
-            db.SaveChanges();
+            projectRepo.InsertProject(project);
 
             return CreatedAtRoute("DefaultApi", new { id = project.Id }, project);
         }
@@ -90,30 +74,20 @@ namespace QUp.Api.Controllers
         [ResponseType(typeof(Project))]
         public IHttpActionResult DeleteProject(int id)
         {
-            Project project = db.Projects.Find(id);
+            Project project = projectRepo.GetProjectByID(id);
             if (project == null)
             {
                 return NotFound();
             }
 
-            db.Projects.Remove(project);
-            db.SaveChanges();
+            projectRepo.DeleteProject(id);
 
             return Ok(project);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+        }        
 
         private bool ProjectExists(int id)
         {
-            return db.Projects.Count(e => e.Id == id) > 0;
+            return projectRepo.ProjectExists(id);
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using QUp.Domain;
 using System;
 using System.Collections.Generic;
-using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
@@ -9,28 +8,28 @@ using System.Threading.Tasks;
 
 namespace QUp.DataModel.DAL
 {
-    public class ProjectRepository : IProjectRepository
+    public class SprintRepository : ISprintRepository
     {
         IQUpContext context;
 
-        public ProjectRepository(IQUpContext _context)
+        public SprintRepository(IQUpContext _context)
         {
             context = _context;
         }
 
-        public IEnumerable<Project> GetProjects()
+        public IEnumerable<Sprint> GetSprints()
         {
-            return context.Projects.ToList();
+            return context.Sprints.ToList();
         }
 
-        public Project GetProjectByID(int projectId)
+        public Sprint GetSprintByID(int sprint)
         {
-            return context.Projects.Find(projectId);
+            return context.Sprints.Find(sprint);
         }
 
-        public void InsertProject(Project project)
+        public void InsertSprint(Sprint sprint)
         {
-            context.Projects.Add(project);
+            context.Sprints.Add(sprint);
 
             Save();
         }
@@ -44,31 +43,31 @@ namespace QUp.DataModel.DAL
             catch (DbUpdateConcurrencyException)
             {
                 return false;
-            }          
+            }
 
             return true;
         }
 
 
-        public bool ProjectExists(int id)
+        public bool SprintExists(int id)
         {
             return context.Projects.Count(e => e.Id == id) > 0;
         }
 
-        public bool UpdateProject(Project _project)
+        public bool UpdateSprint(Sprint _sprint)
         {
-            Project project = GetProjectByID(_project.Id);
-            project = _project;       
+            Sprint sprint = GetSprintByID(_sprint.Id);
+            sprint = _sprint;
 
             var result = Save();
 
             return result;
         }
 
-        public void DeleteProject(int projectId)
+        public void DeleteSprint(int sprintId)
         {
-            Project project = context.Projects.Find(projectId);
-            context.Projects.Remove(project);
+            Sprint sprint = context.Sprints.Find(sprintId);
+            context.Sprints.Remove(sprint);
         }
     }
 }

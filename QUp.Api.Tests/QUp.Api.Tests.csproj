@@ -105,6 +105,7 @@
     <Compile Include="TestDbSet.cs" />
     <Compile Include="TestProjectDbSet.cs" />
     <Compile Include="TestQUpContext.cs" />
+    <Compile Include="Tests\TestProjectController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -126,9 +127,7 @@
       <Name>QUp.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

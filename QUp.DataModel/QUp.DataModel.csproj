@@ -75,7 +75,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\IProjectRepository.cs" />
+    <Compile Include="DAL\ISprintRepository.cs" />
     <Compile Include="DAL\ProjectRepository.cs" />
+    <Compile Include="DAL\SprintRepository.cs" />
     <Compile Include="IQUpContext.cs" />
     <Compile Include="Migrations\201609100902476_Initial.cs" />
     <Compile Include="Migrations\201609100902476_Initial.Designer.cs">

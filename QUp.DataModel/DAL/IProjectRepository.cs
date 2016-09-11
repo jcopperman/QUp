@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace QUp.DataModel.DAL
 {
-    public interface IProjectRepository : IDisposable
+    public interface IProjectRepository
     {
         IEnumerable<Project> GetProjects();
-        Project GetProjectsByID(int projectId);
+        Project GetProjectByID(int projectId);
         void InsertProject(Project project);
         void DeleteProject(int projectId);
-        void UpdateProject(Project project);
-        void Save();
+        bool UpdateProject(Project project);
+        bool Save();
     }
 }
