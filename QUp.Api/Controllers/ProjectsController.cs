@@ -11,8 +11,14 @@ namespace QUp.Api.Controllers
 {
     public class ProjectsController : ApiController
     {
-        private QUpContext db = new QUpContext();
+        private IQUpContext db = new QUpContext();
 
+        public ProjectsController() { }
+
+        public ProjectsController(IQUpContext context)
+        {
+            db = context;
+        }
         // GET: api/Projects
         public IQueryable<Project> GetProjects()
         {
@@ -46,7 +52,8 @@ namespace QUp.Api.Controllers
                 return BadRequest();
             }
 
-            db.Entry(project).State = EntityState.Modified;
+            //db.Entry(project).State = EntityState.Modified;
+            db.MarkAsModified(project);
 
             try
             {

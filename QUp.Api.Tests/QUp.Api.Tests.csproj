@@ -33,8 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
@@ -92,8 +102,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\HomeControllerTest.cs" />
-    <Compile Include="Controllers\ValuesControllerTest.cs" />
+    <Compile Include="TestDbSet.cs" />
+    <Compile Include="TestProjectDbSet.cs" />
+    <Compile Include="TestQUpContext.cs" />
+    <Compile Include="Tests\TestProjectController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -105,6 +117,14 @@
     <ProjectReference Include="..\QUp.Api\QUp.Api.csproj">
       <Project>{45DB6ECF-CF28-47A6-9CC9-AE0E12B65864}</Project>
       <Name>QUp.Api</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QUp.DataModel\QUp.DataModel.csproj">
+      <Project>{C52CC30C-66D4-468E-981F-31D0D0608FFF}</Project>
+      <Name>QUp.DataModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QUp.Domain\QUp.Domain.csproj">
+      <Project>{07FFA8AC-1B2E-4A69-95E2-BCAE1D1F49D4}</Project>
+      <Name>QUp.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

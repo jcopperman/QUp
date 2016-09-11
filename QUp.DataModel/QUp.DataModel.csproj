@@ -74,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IQUpContext.cs" />
     <Compile Include="Migrations\201609100902476_Initial.cs" />
     <Compile Include="Migrations\201609100902476_Initial.Designer.cs">
       <DependentUpon>201609100902476_Initial.cs</DependentUpon>

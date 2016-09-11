@@ -13,7 +13,6 @@ C:\Projects\QUp\QUp.Api.Tests\bin\Debug\roslyn\VBCSCompiler.exe.config
 C:\Projects\QUp\QUp.Api.Tests\bin\Debug\QUp.Api.Tests.dll.config
 C:\Projects\QUp\QUp.Api.Tests\bin\Debug\QUp.Api.Tests.dll
 C:\Projects\QUp\QUp.Api.Tests\bin\Debug\QUp.Api.Tests.pdb
-C:\Projects\QUp\QUp.Api.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 C:\Projects\QUp\QUp.Api.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
 C:\Projects\QUp\QUp.Api.Tests\bin\Debug\Newtonsoft.Json.dll
 C:\Projects\QUp\QUp.Api.Tests\bin\Debug\QUp.Api.dll
@@ -67,3 +66,5 @@ C:\Projects\QUp\QUp.Api.Tests\bin\Debug\QUp.DataModel.pdb
 C:\Projects\QUp\QUp.Api.Tests\bin\Debug\QUp.Domain.pdb
 C:\Projects\QUp\QUp.Api.Tests\bin\Debug\WebActivatorEx.dll
 C:\Projects\QUp\QUp.Api.Tests\bin\Debug\Swashbuckle.Core.dll
+C:\Projects\QUp\QUp.Api.Tests\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\QUp\QUp.Api.Tests\bin\Debug\EntityFramework.SqlServer.xml
