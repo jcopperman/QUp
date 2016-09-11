@@ -15,7 +15,14 @@ namespace QUp.Api.Controllers
 {
     public class FeaturesController : ApiController
     {
-        private QUpContext db = new QUpContext();
+        private IQUpContext db = new QUpContext();
+
+        public FeaturesController() { }
+
+        public FeaturesController(IQUpContext context)
+        {
+            db = context;
+        }
 
         // GET: api/Features
         public IQueryable<Feature> GetFeatures()

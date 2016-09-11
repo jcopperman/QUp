@@ -11,7 +11,14 @@ namespace QUp.Api.Controllers
 {
     public class SprintsController : ApiController
     {
-        private QUpContext db = new QUpContext();
+        private IQUpContext db = new QUpContext();
+
+        public SprintsController() { }
+
+        public SprintsController(IQUpContext context)
+        {
+            db = context;
+        }
 
         // GET: api/Sprints
         public IQueryable<Sprint> GetSprints()

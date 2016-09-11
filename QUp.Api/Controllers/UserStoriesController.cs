@@ -11,7 +11,14 @@ namespace QUp.Api.Controllers
 {
     public class UserStoriesController : ApiController
     {
-        private QUpContext db = new QUpContext();
+        private IQUpContext db = new QUpContext();
+
+        public UserStoriesController() { }
+
+        public UserStoriesController(IQUpContext context)
+        {
+            db = context;
+        }
 
         // GET: api/UserStories
         public IQueryable<UserStory> GetStories()

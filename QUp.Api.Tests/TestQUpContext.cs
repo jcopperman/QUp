@@ -10,9 +10,14 @@ namespace QUp.Api.Tests
         public TestQUpContext()
         {
             this.Projects = new TestProjectDbSet();
+            //Todo add rest of the entities to context
         }
 
         public DbSet<Project> Projects { get; set; }
+        public DbSet<Sprint> Sprints { get; set; }
+        public DbSet<Feature> Features { get; set; }
+        public DbSet<UserStory> Stories { get; set; }
+        public DbSet<Issues> Issues { get; set; }
 
         public int SaveChanges()
         {
