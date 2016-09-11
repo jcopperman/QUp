@@ -37,3 +37,15 @@ C:\Projects\QUp\QUp.Api\obj\Debug\QUp.Api.pdb
 C:\Projects\QUp\QUp.Api\bin\Microsoft.Web.Infrastructure.dll
 C:\Projects\QUp\QUp.Api\bin\Swashbuckle.Core.dll
 C:\Projects\QUp\QUp.Api\bin\WebActivatorEx.dll
+C:\Projects\QUp\QUp.Api\bin\Serilog.dll
+C:\Projects\QUp\QUp.Api\bin\Serilog.Formatting.Compact.dll
+C:\Projects\QUp\QUp.Api\bin\Serilog.Sinks.PeriodicBatching.dll
+C:\Projects\QUp\QUp.Api\bin\Serilog.Sinks.Redis.Core.dll
+C:\Projects\QUp\QUp.Api\bin\Serilog.Sinks.Redis.List.dll
+C:\Projects\QUp\QUp.Api\bin\StackExchange.Redis.dll
+C:\Projects\QUp\QUp.Api\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Projects\QUp\QUp.Api\bin\Serilog.xml
+C:\Projects\QUp\QUp.Api\bin\Serilog.Formatting.Compact.xml
+C:\Projects\QUp\QUp.Api\bin\Serilog.Sinks.PeriodicBatching.xml
+C:\Projects\QUp\QUp.Api\bin\StackExchange.Redis.pdb
+C:\Projects\QUp\QUp.Api\bin\StackExchange.Redis.xml

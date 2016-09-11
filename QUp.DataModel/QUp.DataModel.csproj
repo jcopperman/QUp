@@ -74,6 +74,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\IProjectRepository.cs" />
+    <Compile Include="DAL\ProjectRepository.cs" />
     <Compile Include="IQUpContext.cs" />
     <Compile Include="Migrations\201609100902476_Initial.cs" />
     <Compile Include="Migrations\201609100902476_Initial.Designer.cs">
@@ -94,6 +96,10 @@
     <Compile Include="Migrations\201609101022408_Added IsHotfix.cs" />
     <Compile Include="Migrations\201609101022408_Added IsHotfix.Designer.cs">
       <DependentUpon>201609101022408_Added IsHotfix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609111140393_Added isAutomated.cs" />
+    <Compile Include="Migrations\201609111140393_Added isAutomated.Designer.cs">
+      <DependentUpon>201609111140393_Added isAutomated.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="QUpContext.cs" />
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609101022408_Added IsHotfix.resx">
       <DependentUpon>201609101022408_Added IsHotfix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609111140393_Added isAutomated.resx">
+      <DependentUpon>201609111140393_Added isAutomated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

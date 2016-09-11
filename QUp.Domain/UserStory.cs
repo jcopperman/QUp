@@ -11,6 +11,8 @@ namespace QUp.Domain
         public string Title { get; set; }
         public string Description { get; set; }
 
+        public bool IsAutomated { get; set; }
+
         public Keywords Keywords { get; set; }
 
         public Status Status { get; set; }

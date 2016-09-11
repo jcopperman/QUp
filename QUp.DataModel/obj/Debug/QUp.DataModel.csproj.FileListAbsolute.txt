@@ -26,3 +26,4 @@ C:\Projects\QUp\QUp.DataModel\obj\Debug\QUp.DataModel.Migrations.AddedIsHotfix.r
 C:\Projects\QUp\QUp.DataModel\obj\Debug\QUp.DataModel.csproj.GenerateResource.Cache
 C:\Projects\QUp\QUp.DataModel\obj\Debug\QUp.DataModel.dll
 C:\Projects\QUp\QUp.DataModel\obj\Debug\QUp.DataModel.pdb
+C:\Projects\QUp\QUp.DataModel\obj\Debug\QUp.DataModel.Migrations.AddedisAutomated.resources
