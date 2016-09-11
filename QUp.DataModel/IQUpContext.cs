@@ -13,6 +13,7 @@ namespace QUp.DataModel
         DbSet<Issues> Issues { get; set; }
 
         int SaveChanges();
+
         void MarkAsModified(Project item);
     }
 }

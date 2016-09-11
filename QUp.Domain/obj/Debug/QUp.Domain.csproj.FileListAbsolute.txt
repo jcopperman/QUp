@@ -1,5 +1,4 @@
 C:\Projects\QUp\QUp.Domain\bin\Debug\QUp.Domain.dll
 C:\Projects\QUp\QUp.Domain\bin\Debug\QUp.Domain.pdb
-C:\Projects\QUp\QUp.Domain\obj\Debug\QUp.Domain.csprojResolveAssemblyReference.cache
 C:\Projects\QUp\QUp.Domain\obj\Debug\QUp.Domain.dll
 C:\Projects\QUp\QUp.Domain\obj\Debug\QUp.Domain.pdb

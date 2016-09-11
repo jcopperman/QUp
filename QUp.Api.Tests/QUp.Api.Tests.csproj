@@ -105,7 +105,6 @@
     <Compile Include="TestDbSet.cs" />
     <Compile Include="TestProjectDbSet.cs" />
     <Compile Include="TestQUpContext.cs" />
-    <Compile Include="Tests\TestProjectController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.config" />
@@ -115,7 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\QUp.Api\QUp.Api.csproj">
-      <Project>{45DB6ECF-CF28-47A6-9CC9-AE0E12B65864}</Project>
+      <Project>{53899ad3-a072-4b41-93dd-3008b4a67c05}</Project>
       <Name>QUp.Api</Name>
     </ProjectReference>
     <ProjectReference Include="..\QUp.DataModel\QUp.DataModel.csproj">
@@ -126,6 +125,9 @@
       <Project>{07FFA8AC-1B2E-4A69-95E2-BCAE1D1F49D4}</Project>
       <Name>QUp.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

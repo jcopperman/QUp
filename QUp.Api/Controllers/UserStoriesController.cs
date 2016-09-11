@@ -1,7 +1,11 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using QUp.DataModel;
@@ -11,14 +15,7 @@ namespace QUp.Api.Controllers
 {
     public class UserStoriesController : ApiController
     {
-        private IQUpContext db = new QUpContext();
-
-        public UserStoriesController() { }
-
-        public UserStoriesController(IQUpContext context)
-        {
-            db = context;
-        }
+        private QUpContext db = new QUpContext();
 
         // GET: api/UserStories
         public IQueryable<UserStory> GetStories()

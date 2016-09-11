@@ -1,7 +1,11 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using QUp.DataModel;
@@ -11,14 +15,8 @@ namespace QUp.Api.Controllers
 {
     public class ProjectsController : ApiController
     {
-        private IQUpContext db = new QUpContext();
+        private QUpContext db = new QUpContext();
 
-        public ProjectsController() { }
-
-        public ProjectsController(IQUpContext context)
-        {
-            db = context;
-        }
         // GET: api/Projects
         public IQueryable<Project> GetProjects()
         {
@@ -52,8 +50,7 @@ namespace QUp.Api.Controllers
                 return BadRequest();
             }
 
-            //db.Entry(project).State = EntityState.Modified;
-            db.MarkAsModified(project);
+            db.Entry(project).State = EntityState.Modified;
 
             try
             {

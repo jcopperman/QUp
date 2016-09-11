@@ -9,6 +9,5 @@ C:\Projects\QUp\QUp.Web\bin\Newtonsoft.Json.xml
 C:\Projects\QUp\QUp.Web\bin\System.Net.Http.Formatting.xml
 C:\Projects\QUp\QUp.Web\bin\System.Web.Http.xml
 C:\Projects\QUp\QUp.Web\bin\System.Web.Http.WebHost.xml
-C:\Projects\QUp\QUp.Web\obj\Debug\QUp.Web.csprojResolveAssemblyReference.cache
 C:\Projects\QUp\QUp.Web\obj\Debug\AngularJSWebApiEmpty.dll
 C:\Projects\QUp\QUp.Web\obj\Debug\AngularJSWebApiEmpty.pdb

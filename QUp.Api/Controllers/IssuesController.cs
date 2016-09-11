@@ -15,14 +15,7 @@ namespace QUp.Api.Controllers
 {
     public class IssuesController : ApiController
     {
-        private IQUpContext db = new QUpContext();
-
-        public IssuesController() { }
-
-        public IssuesController(IQUpContext context)
-        {
-            db = context;
-        }
+        private QUpContext db = new QUpContext();
 
         // GET: api/Issues
         public IQueryable<Issues> GetIssues()

@@ -25,6 +25,10 @@ namespace QUp.Api.Tests
         }
 
         public void MarkAsModified(Project item) { }
+        public void MarkAsModified(Sprint item) { }
+        public void MarkAsModified(Feature item) { }
+        public void MarkAsModified(UserStory item) { }
+        public void MarkAsModified(Issues item) { }
         public void Dispose() { }
     }
 }
