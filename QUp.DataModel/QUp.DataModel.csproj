@@ -74,13 +74,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\FeatureRepository.cs" />
     <Compile Include="DAL\IFeatureRepository.cs" />
     <Compile Include="DAL\IIssueRepository.cs" />
     <Compile Include="DAL\IProjectRepository.cs" />
     <Compile Include="DAL\ISprintRepository.cs" />
+    <Compile Include="DAL\IssuesRepository.cs" />
     <Compile Include="DAL\IUserStoryRepository.cs" />
     <Compile Include="DAL\ProjectRepository.cs" />
     <Compile Include="DAL\SprintRepository.cs" />
+    <Compile Include="DAL\UserStoryRepository.cs" />
     <Compile Include="IQUpContext.cs" />
     <Compile Include="Migrations\201609100902476_Initial.cs" />
     <Compile Include="Migrations\201609100902476_Initial.Designer.cs">

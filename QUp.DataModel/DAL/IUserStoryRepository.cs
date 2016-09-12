@@ -10,7 +10,7 @@ namespace QUp.DataModel.DAL
     public interface IUserStoryRepository
     {
         IEnumerable<UserStory> GetUserStories();
-        Project GetUserStoryByID(int UserStoryId);
+        UserStory GetUserStoryByID(int userStoryId);
         void InsertUserStory(UserStory userstory);
         void DeleteUserStory(int userStoryId);
         bool UpdateUserStory(UserStory userStory);

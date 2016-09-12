@@ -10,8 +10,8 @@ namespace QUp.DataModel.DAL
     public interface IFeatureRepository
     {
         IEnumerable<Feature> GetFeatures();
-        Project GetFeatureByID(int featureId);
-        void InsertFeaturet(Feature feature);
+        Feature GetFeatureById(int featureId);
+        void InsertFeature(Feature feature);
         void DeleteFeature(int featureId);
         bool UpdateFeature(Feature feature);
         bool Save();
