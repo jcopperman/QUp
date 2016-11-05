@@ -9,7 +9,7 @@ The following features are currently available in QUp:
 4. User Stories - User stories for sprint
 5. Issues - Issues logged on user stories or features
 
-SwaggerUI is included in the API for easy documentation and testing. 
+SwaggerUI is included in the QUp.API for easy documentation and testing. 
 
 Backlog:
 
