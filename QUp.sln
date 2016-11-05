@@ -11,38 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QUp.Api.Tests", "QUp.Api.Te
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QUp.Api", "QUp.Api\QUp.Api.csproj", "{53899AD3-A072-4B41-93DD-3008B4A67C05}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "QUp.Web", "QUp.Web", "{8D2796B7-C431-41A2-BB79-5357EFBEBECF}"
-	ProjectSection(SolutionItems) = preProject
-		index.html = index.html
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{470EFD64-9D0E-471C-80DD-A7C91BEA630B}"
-	ProjectSection(SolutionItems) = preProject
-		css\bootstrap-theme.css = css\bootstrap-theme.css
-		css\bootstrap-theme.css.map = css\bootstrap-theme.css.map
-		css\bootstrap-theme.min.css = css\bootstrap-theme.min.css
-		css\bootstrap-theme.min.css.map = css\bootstrap-theme.min.css.map
-		css\bootstrap.css = css\bootstrap.css
-		css\bootstrap.css.map = css\bootstrap.css.map
-		css\bootstrap.min.css = css\bootstrap.min.css
-		css\bootstrap.min.css.map = css\bootstrap.min.css.map
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{A84BB51A-DA20-40D1-9165-79337A2F7BA2}"
-	ProjectSection(SolutionItems) = preProject
-		js\bootstrap.js = js\bootstrap.js
-		js\bootstrap.min.js = js\bootstrap.min.js
-		js\npm.js = js\npm.js
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fonts", "fonts", "{F2FBDF8B-F3EC-4DBB-B514-5FCAAC78414F}"
-	ProjectSection(SolutionItems) = preProject
-		fonts\glyphicons-halflings-regular.eot = fonts\glyphicons-halflings-regular.eot
-		fonts\glyphicons-halflings-regular.svg = fonts\glyphicons-halflings-regular.svg
-		fonts\glyphicons-halflings-regular.ttf = fonts\glyphicons-halflings-regular.ttf
-		fonts\glyphicons-halflings-regular.woff = fonts\glyphicons-halflings-regular.woff
-		fonts\glyphicons-halflings-regular.woff2 = fonts\glyphicons-halflings-regular.woff2
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QUp.Web", "QUp.Web\QUp.Web.csproj", "{A0B376FD-5583-40D1-8BFB-B42E5A190ED4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -66,13 +35,12 @@ Global
 		{53899AD3-A072-4B41-93DD-3008B4A67C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53899AD3-A072-4B41-93DD-3008B4A67C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53899AD3-A072-4B41-93DD-3008B4A67C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0B376FD-5583-40D1-8BFB-B42E5A190ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0B376FD-5583-40D1-8BFB-B42E5A190ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0B376FD-5583-40D1-8BFB-B42E5A190ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0B376FD-5583-40D1-8BFB-B42E5A190ED4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{470EFD64-9D0E-471C-80DD-A7C91BEA630B} = {8D2796B7-C431-41A2-BB79-5357EFBEBECF}
-		{A84BB51A-DA20-40D1-9165-79337A2F7BA2} = {8D2796B7-C431-41A2-BB79-5357EFBEBECF}
-		{F2FBDF8B-F3EC-4DBB-B514-5FCAAC78414F} = {8D2796B7-C431-41A2-BB79-5357EFBEBECF}
 	EndGlobalSection
 EndGlobal

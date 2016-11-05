@@ -3,3 +3,8 @@ C:\Projects\QUp\QUp.Domain\bin\Debug\QUp.Domain.pdb
 C:\Projects\QUp\QUp.Domain\obj\Debug\QUp.Domain.dll
 C:\Projects\QUp\QUp.Domain\obj\Debug\QUp.Domain.pdb
 C:\Projects\QUp\QUp.Domain\obj\Debug\QUp.Domain.csprojResolveAssemblyReference.cache
+C:\Dev\QUp\QUp.Domain\bin\Debug\QUp.Domain.dll
+C:\Dev\QUp\QUp.Domain\bin\Debug\QUp.Domain.pdb
+C:\Dev\QUp\QUp.Domain\obj\Debug\QUp.Domain.csprojResolveAssemblyReference.cache
+C:\Dev\QUp\QUp.Domain\obj\Debug\QUp.Domain.dll
+C:\Dev\QUp\QUp.Domain\obj\Debug\QUp.Domain.pdb
