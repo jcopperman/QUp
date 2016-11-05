@@ -12,10 +12,12 @@ The following features are currently available in QUp:
 SwaggerUI is included in the API for easy documentation and testing. 
 
 Backlog:
+
 1. Front end - In progress
 2. Reporting(with a dashboard)
 
 Nice-to-haves:
+
 1. Test automation binding and reporting
 2. QUp as a Jira Plugin
 3. Test case importing and exporting
