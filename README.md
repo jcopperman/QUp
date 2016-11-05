@@ -18,7 +18,9 @@ Backlog:
 
 Nice-to-haves:
 
-1. Test automation binding and reporting
-2. QUp as a Jira Plugin
-3. Test case importing and exporting
+1. QUp as a Jira Plugin
+2. Test automation binding and reporting
+3. Generate feature files for BDD tools like SpecFlow or Cucumber
+4. Test case importing and exporting
+
 
