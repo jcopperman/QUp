@@ -14,6 +14,8 @@ namespace QUp.DataModel
         public DbSet<UserStory> Stories { get; set; }
         public DbSet<Issues> Issues { get; set; }
 
+       public QUpContext() : base("QupDbContext") { }
+
         public void MarkAsModified(Project item)
         {
             throw new NotImplementedException();

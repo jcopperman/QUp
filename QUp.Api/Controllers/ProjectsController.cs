@@ -20,7 +20,11 @@ namespace QUp.Api.Controllers
 
         // GET: api/Projects
         public IEnumerable<Project> GetProjects()
-        {
+        {        
+            //using(var context = new DbContext())
+            //{
+
+            //}  
             return projectRepo.GetProjects();
         }
 

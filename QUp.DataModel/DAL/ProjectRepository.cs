@@ -44,7 +44,7 @@ namespace QUp.DataModel.DAL
             catch (DbUpdateConcurrencyException)
             {
                 return false;
-            }          
+            }
 
             return true;
         }
@@ -58,7 +58,7 @@ namespace QUp.DataModel.DAL
         public bool UpdateProject(Project _project)
         {
             Project project = GetProjectByID(_project.Id);
-            project = _project;       
+            project = _project;
 
             var result = Save();
 

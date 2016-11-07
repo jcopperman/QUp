@@ -49,3 +49,6 @@ C:\Projects\QUp\QUp.Api.Tests\obj\Debug\QUp.Api.Tests.dll
 C:\Projects\QUp\QUp.Api.Tests\obj\Debug\QUp.Api.Tests.pdb
 C:\Projects\QUp\QUp.Api.Tests\bin\Debug\WebActivatorEx.dll
 C:\Projects\QUp\QUp.Api.Tests\bin\Debug\Swashbuckle.Core.dll
+C:\Dev\QUp\QUp.Api.Tests\obj\Debug\QUp.Api.Tests.csprojResolveAssemblyReference.cache
+C:\Dev\QUp\QUp.Api.Tests\obj\Debug\QUp.Api.Tests.dll
+C:\Dev\QUp\QUp.Api.Tests\obj\Debug\QUp.Api.Tests.pdb

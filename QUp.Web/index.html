@@ -3,8 +3,24 @@
 <head>
     <title></title>
 	<meta charset="utf-8" />
+
+
+    <!-- Register scripts -->
+    <script type="text/javascript" src="Scripts/vendor/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="Scripts/vendor/angular.min.js"></script>
+    <script type="text/javascript" src="Scripts/vendor/angular-route.min.js"></script>
+    <script type="text/javascript" src="Scripts/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Scripts/App/QupApp.js"></script>
+    <script type="text/javascript" src="Scripts/App/controllers/ProjectsCtrl.js"></script>
+
 </head>
-<body>
-    <h1>hey jude</h1>
+<body ng-app="QupApp">
+    <div ng-controller="projectsCtrl">
+        <div ng-repeat="prod in products"> {{prod}}</div>
+    </div>
 </body>
 </html>
+
+
+
+
